@@ -2,18 +2,22 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./components/layout/Header";
 
-import Page1 from "./components/routes/pages/Page1";
+import SideScroller from "./components/routes/pages/SideScroller";
 
 import "./style.css";
 
 const App = () => {
   return (
-    <div className="app full-screen">
+    <div className="app">
       <BrowserRouter>
         <Header />
         <div className="routes">
           <Routes>
-            <Route exact path="/pages/1" element={<Page1 />} />
+            <Route
+              exact
+              path="/pages/side-scroller"
+              element={<SideScroller />}
+            />
           </Routes>
         </div>
       </BrowserRouter>

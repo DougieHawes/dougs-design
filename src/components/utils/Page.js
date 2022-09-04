@@ -10,6 +10,9 @@ const Page = ({ content }) => {
       <div className="page-content">
         {content}
         <div className="page-toggle" onClick={() => togglePageFull(!pageFull)}>
+          <div className="page-toggle-hover-text">
+            {pageFull && "exit"} fullscreen
+          </div>
           <div className="page-toggle-lines">
             <div className="page-toggle-line page-toggle-line-1"></div>
             <div className="page-toggle-line page-toggle-line-2"></div>

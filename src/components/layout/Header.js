@@ -18,8 +18,8 @@ const Header = () => {
           <div className="menu-bar bar3"></div>
         </div>
         <div className={`menu-body ${menuOpen && "menu-body-open"}`}>
-          <h2 className="menu-title">EFFECTS</h2>
-          <Link to="/effect1">Effect1</Link>
+          <h2 className="menu-title">PAGES</h2>
+          <Link to="/pages/side-scroller">side-scroller</Link>
           <h2 className="menu-title">UTILITIES</h2>
           <Link to="/buttons">Buttons</Link>
         </div>
