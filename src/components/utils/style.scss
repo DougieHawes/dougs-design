@@ -1,0 +1,112 @@
+@import "../../variables.scss";
+
+.page {
+  background-color: $colour1;
+  height: 420px;
+  left: 50%;
+  position: absolute;
+  top: 70px;
+  transform: translateX(-50%);
+  width: 594px;
+
+  transition: 0.6s top ease-in-out, 0.6s width ease-in-out;
+  .page-content {
+    position: relative;
+    .page-toggle {
+      cursor: pointer;
+      height: 30px;
+      position: absolute;
+      right: 4px;
+      top: 4px;
+      width: 42px;
+
+      transition: 0.6s top ease-in-out;
+      .page-toggle-lines {
+        height: 100%;
+        position: relative;
+        width: 100%;
+        .page-toggle-line {
+          background-color: $colour2;
+          height: 2px;
+          position: absolute;
+
+          transition: 0.6s transform ease-in-out;
+        }
+        .page-toggle-line-1,
+        .page-toggle-line-2,
+        .page-toggle-line-3,
+        .page-toggle-line-4 {
+          height: 2px;
+          width: 18px;
+        }
+        .page-toggle-line-1 {
+          left: 0;
+          top: 0;
+        }
+        .page-toggle-line-2 {
+          right: 0;
+          top: 0;
+        }
+        .page-toggle-line-3 {
+          bottom: 0;
+          left: 0;
+        }
+        .page-toggle-line-4 {
+          bottom: 0;
+          right: 0;
+        }
+        .page-toggle-line-5,
+        .page-toggle-line-6,
+        .page-toggle-line-7,
+        .page-toggle-line-8 {
+          height: 12px;
+          width: 2px;
+        }
+        .page-toggle-line-5 {
+          left: 0;
+          top: 0;
+        }
+        .page-toggle-line-6 {
+          bottom: 0;
+          left: 0;
+        }
+        .page-toggle-line-7 {
+          right: 0;
+          top: 0;
+        }
+        .page-toggle-line-8 {
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+}
+.page-full {
+  height: 100vh;
+  top: 0;
+  width: 100%;
+  .page-content {
+    .page-toggle {
+      top: calc(100vh - 35px);
+      .page-toggle-lines {
+        .page-toggle-line-1,
+        .page-toggle-line-2 {
+          top: 12px;
+        }
+        .page-toggle-line-3,
+        .page-toggle-line-4 {
+          bottom: 12px;
+        }
+        .page-toggle-line-5,
+        .page-toggle-line-6 {
+          left: 18px;
+        }
+        .page-toggle-line-7,
+        .page-toggle-line-8 {
+          right: 18px;
+        }
+      }
+    }
+  }
+}
