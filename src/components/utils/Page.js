@@ -3,12 +3,12 @@ import { useState } from "react";
 import "./style.css";
 
 const Page = ({ content }) => {
-  const [pageFull, togglePageFull] = useState(true);
+  const [pageFull, togglePageFull] = useState(false);
 
   return (
     <div className={`page ${pageFull && "page-full"}`}>
-      <div className="page-content">
-        {content}
+      <div className="page-container">
+        <div className="page-content">{content}</div>
         <div className="page-toggle" onClick={() => togglePageFull(!pageFull)}>
           <div className="page-toggle-hover-text">
             {pageFull && "exit"} fullscreen

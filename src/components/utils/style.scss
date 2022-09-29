@@ -2,16 +2,25 @@
 
 .page {
   background-color: $colour1;
-  height: 420px;
+  height: 0vh;
+  min-height: 420px;
   left: 50%;
   position: absolute;
   top: 70px;
   transform: translateX(-50%);
   width: 594px;
 
-  transition: 0.6s top ease-in-out, 0.6s width ease-in-out;
-  .page-content {
+  transition: 0.6s height ease-in-out, 0.6s top ease-in-out,
+    0.6s width ease-in-out;
+  .page-container {
     position: relative;
+    .page-content {
+      height: 0vh;
+      min-height: 420px;
+      width: 100%;
+
+      transition: 0.6s height ease-in-out;
+    }
     .page-toggle {
       cursor: pointer;
       height: 30px;
@@ -99,7 +108,10 @@
   height: 100vh;
   top: 0;
   width: 100%;
-  .page-content {
+  .page-container {
+    .page-content {
+      height: 100vh;
+    }
     .page-toggle {
       top: calc(100vh - 35px);
       .page-toggle-lines {

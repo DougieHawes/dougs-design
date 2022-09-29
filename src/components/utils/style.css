@@ -6,18 +6,25 @@
 
 .page {
   background-color: #3b2f2f;
-  height: 420px;
+  height: 0vh;
+  min-height: 420px;
   left: 50%;
   position: absolute;
   top: 70px;
   transform: translateX(-50%);
   width: 594px;
-  transition: 0.6s top ease-in-out, 0.6s width ease-in-out;
+  transition: 0.6s height ease-in-out, 0.6s top ease-in-out, 0.6s width ease-in-out;
 }
-.page .page-content {
+.page .page-container {
   position: relative;
 }
-.page .page-content .page-toggle {
+.page .page-container .page-content {
+  height: 0vh;
+  min-height: 420px;
+  width: 100%;
+  transition: 0.6s height ease-in-out;
+}
+.page .page-container .page-toggle {
   cursor: pointer;
   height: 30px;
   position: absolute;
@@ -26,7 +33,7 @@
   width: 42px;
   transition: 0.6s top ease-in-out;
 }
-.page .page-content .page-toggle .page-toggle-hover-text {
+.page .page-container .page-toggle .page-toggle-hover-text {
   color: #f8f8f8;
   opacity: 0;
   position: absolute;
@@ -34,64 +41,64 @@
   text-align: right;
   top: 0;
 }
-.page .page-content .page-toggle .page-toggle-lines {
+.page .page-container .page-toggle .page-toggle-lines {
   height: 100%;
   position: relative;
   width: 100%;
 }
-.page .page-content .page-toggle .page-toggle-lines .page-toggle-line {
+.page .page-container .page-toggle .page-toggle-lines .page-toggle-line {
   background-color: #f8f8f8;
   height: 2px;
   position: absolute;
   transition: 0.6s transform ease-in-out;
 }
-.page .page-content .page-toggle .page-toggle-lines .page-toggle-line-1,
-.page .page-content .page-toggle .page-toggle-lines .page-toggle-line-2,
-.page .page-content .page-toggle .page-toggle-lines .page-toggle-line-3,
-.page .page-content .page-toggle .page-toggle-lines .page-toggle-line-4 {
+.page .page-container .page-toggle .page-toggle-lines .page-toggle-line-1,
+.page .page-container .page-toggle .page-toggle-lines .page-toggle-line-2,
+.page .page-container .page-toggle .page-toggle-lines .page-toggle-line-3,
+.page .page-container .page-toggle .page-toggle-lines .page-toggle-line-4 {
   height: 2px;
   width: 18px;
 }
-.page .page-content .page-toggle .page-toggle-lines .page-toggle-line-1 {
+.page .page-container .page-toggle .page-toggle-lines .page-toggle-line-1 {
   left: 0;
   top: 0;
 }
-.page .page-content .page-toggle .page-toggle-lines .page-toggle-line-2 {
+.page .page-container .page-toggle .page-toggle-lines .page-toggle-line-2 {
   right: 0;
   top: 0;
 }
-.page .page-content .page-toggle .page-toggle-lines .page-toggle-line-3 {
+.page .page-container .page-toggle .page-toggle-lines .page-toggle-line-3 {
   bottom: 0;
   left: 0;
 }
-.page .page-content .page-toggle .page-toggle-lines .page-toggle-line-4 {
+.page .page-container .page-toggle .page-toggle-lines .page-toggle-line-4 {
   bottom: 0;
   right: 0;
 }
-.page .page-content .page-toggle .page-toggle-lines .page-toggle-line-5,
-.page .page-content .page-toggle .page-toggle-lines .page-toggle-line-6,
-.page .page-content .page-toggle .page-toggle-lines .page-toggle-line-7,
-.page .page-content .page-toggle .page-toggle-lines .page-toggle-line-8 {
+.page .page-container .page-toggle .page-toggle-lines .page-toggle-line-5,
+.page .page-container .page-toggle .page-toggle-lines .page-toggle-line-6,
+.page .page-container .page-toggle .page-toggle-lines .page-toggle-line-7,
+.page .page-container .page-toggle .page-toggle-lines .page-toggle-line-8 {
   height: 12px;
   width: 2px;
 }
-.page .page-content .page-toggle .page-toggle-lines .page-toggle-line-5 {
+.page .page-container .page-toggle .page-toggle-lines .page-toggle-line-5 {
   left: 0;
   top: 0;
 }
-.page .page-content .page-toggle .page-toggle-lines .page-toggle-line-6 {
+.page .page-container .page-toggle .page-toggle-lines .page-toggle-line-6 {
   bottom: 0;
   left: 0;
 }
-.page .page-content .page-toggle .page-toggle-lines .page-toggle-line-7 {
+.page .page-container .page-toggle .page-toggle-lines .page-toggle-line-7 {
   right: 0;
   top: 0;
 }
-.page .page-content .page-toggle .page-toggle-lines .page-toggle-line-8 {
+.page .page-container .page-toggle .page-toggle-lines .page-toggle-line-8 {
   bottom: 0;
   right: 0;
 }
-.page .page-content .page-toggle:hover .page-toggle-hover-text {
+.page .page-container .page-toggle:hover .page-toggle-hover-text {
   opacity: 1;
 }
 
@@ -100,22 +107,25 @@
   top: 0;
   width: 100%;
 }
-.page-full .page-content .page-toggle {
+.page-full .page-container .page-content {
+  height: 100vh;
+}
+.page-full .page-container .page-toggle {
   top: calc(100vh - 35px);
 }
-.page-full .page-content .page-toggle .page-toggle-lines .page-toggle-line-1,
-.page-full .page-content .page-toggle .page-toggle-lines .page-toggle-line-2 {
+.page-full .page-container .page-toggle .page-toggle-lines .page-toggle-line-1,
+.page-full .page-container .page-toggle .page-toggle-lines .page-toggle-line-2 {
   top: 12px;
 }
-.page-full .page-content .page-toggle .page-toggle-lines .page-toggle-line-3,
-.page-full .page-content .page-toggle .page-toggle-lines .page-toggle-line-4 {
+.page-full .page-container .page-toggle .page-toggle-lines .page-toggle-line-3,
+.page-full .page-container .page-toggle .page-toggle-lines .page-toggle-line-4 {
   bottom: 12px;
 }
-.page-full .page-content .page-toggle .page-toggle-lines .page-toggle-line-5,
-.page-full .page-content .page-toggle .page-toggle-lines .page-toggle-line-6 {
+.page-full .page-container .page-toggle .page-toggle-lines .page-toggle-line-5,
+.page-full .page-container .page-toggle .page-toggle-lines .page-toggle-line-6 {
   left: 18px;
 }
-.page-full .page-content .page-toggle .page-toggle-lines .page-toggle-line-7,
-.page-full .page-content .page-toggle .page-toggle-lines .page-toggle-line-8 {
+.page-full .page-container .page-toggle .page-toggle-lines .page-toggle-line-7,
+.page-full .page-container .page-toggle .page-toggle-lines .page-toggle-line-8 {
   right: 18px;
 }/*# sourceMappingURL=style.css.map */
